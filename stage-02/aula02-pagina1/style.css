@@ -5,6 +5,11 @@
 
 body {
   color: #7d7987;
+  background: linear-gradient(
+    180deg,
+    rgb(251, 251, 251) 82.08%,
+    rgba(225, 255, 248, 1) 100%
+  );
 }
 .page {
   margin: 70px 180px 0;
@@ -72,6 +77,7 @@ p {
   font-family: 'Open Sans', sans-serif;
   line-height: 28px;
   margin-bottom: 40px;
+  font-size: 14px;
 }
 
 button {
@@ -97,6 +103,7 @@ footer {
   display: flex;
   justify-content: center;
   color: #000;
+  font-size: 14px;
 }
 
 #balls {
