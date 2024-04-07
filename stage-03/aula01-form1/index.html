@@ -21,14 +21,14 @@
     </header>
 
     <!-- esse action serve para colocar o endereço para onde o formulario deve ser enviado, dentro do <form> tambem existe o method, que serve parqa colocar o GET/POST dependendo do que precisa ser feito com esse formulario -->
-    <form action="">
+    <form action="" id="my-form">
       <fieldset>
         <legend>Informações do Evento</legend>
         <div class="input">
           <label for="title"
             >Título do evento <span>(mínimo 8 caracteres)</span></label
           >
-          <input type="text" id="title" />
+          <input type="text" id="title" minlength="8" required/>
         </div>
         <div class="input">
           <label for="link"
@@ -40,16 +40,18 @@
           <label for="contact"
             >Whatsapp para contato <span>(somente números)</span></label
           >
-          <input type="number" />
+          <input type="tel" required/>
         </div>
         <div class="input">
           <label for="infos">Informações extras</label>
           <textarea name="" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="input">
-          <label for="category"></label>
+          <label for="category">Categoria</label>
           <select name="" id="category">
-            <option value="">Tipo de evento</option>
+            <option value="live">Ao vivo</option>
+            <option value="podcast">Podcast</option>
+            <option value="mentoring">Mentoria</option>
           </select>
         </div>
       </fieldset>
@@ -93,10 +95,10 @@
           </div>
         </div>
       </fieldset>
-
-      <div class="btn">
-        <button>Salvar evento</button>
-      </div>
     </form>
+    <footer>
+      <!-- quando um botao de envio está fora do <form> podemos usar o atributo form=''para referenciar o formulario. E na tag <form> colocamos o id igual ao do form='', assim o botão apontará para aquele formulario mesmo estando fora dele. -->
+      <button form="my-form">Salvar evento</button>
+    </footer>
   </body>
 </html>
