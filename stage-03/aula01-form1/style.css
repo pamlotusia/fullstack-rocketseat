@@ -225,8 +225,13 @@ button {
   color: #fff;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #0ea150;
 }
 /* campos invalidos */
 input:invalid {
-  border: #ff1010 1px solid;
+  outline: #ff1010 1px solid;
 }
