@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #efefef;
+}
+
+body::before{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 27rem;
+  width: 100%;
+  background-color: #535971;
+  top: 0;
+}
+h1, h2, legend, button{
+  font-family: "Staatliches", sans-serif;
+}
+
+header{
+  margin: 8.5rem auto 3.6rem;
+  width: 46.8rem;
+}
+
+h1{
+  font-size: 48px;
+  color: #fff;
+  font-weight: 400;
+}
+
+header p{
+  color: #fff;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  width: 26rem;
+}
+
+form{
+  width: 48.6rem;
+  margin: auto;
+  padding: 4rem;
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+}
+
+fieldset{
+  border: none;
+}
+
+fieldset:nth-child(2),fieldset:nth-child(3){
+  margin-top: 30px;
+}
+
+legend{
+  color: #535971;
+  font-size: 24px;
+  border-bottom: #E6E6F0 1px solid;
+  width: 100%;
+  padding-bottom: 1rem;
+  margin-bottom: 24px;
+
+}
+
+input{
+  background-color: #FAFAFC;
+  outline: none;
+  border: #E6E6F0 1px solid;
+  border-radius: 8px;
+  height: 3.5rem ;
+  padding: 10px;
+}
+
+label{
+  color: #4E4958;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+span{
+  color: #C1BCCC;
+  font-size: 12px;
+}
+
+h2{
+  color: #535971;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.name input{
+  width: 19rem;
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+h2{
+  margin-bottom: 8px;
+}
+.date-container{
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+
+.date, .date-time{
+display: flex;
+flex-direction: column;
+}
+.date{
+  margin-right: 32px;
+}
+
+.date input{
+width: 320px;
+}
+
+.date-time input{
+  width: 140px;
+}
+
+footer{
+  margin: auto;
+  height: 10rem;
+  width: 48.6rem;
+  border-radius:0 0 20px 20px;
+  background-color: #535971;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  padding: 16px 40px;
+  width: 608px;
+  height: 55px;
+  border: none;
+  border-radius: 20px;
+  background-color: #FF5374;
+  color: #fff;
+  font-size: 20px;
+}
