@@ -130,3 +130,40 @@ footer{
   color: var(--white);
   background-color: var(--action-color);
 }
+
+@media (min-width: 1440px){
+  body{
+    display: grid;
+    grid-template-areas: "header header header"
+    "main main sidebar"
+    "main main sidebar"
+    "footer footer footer";
+  }
+
+  header{
+    grid-area: header;
+    padding: 0 11rem;
+  }
+  main{
+    grid-area: main;
+    width: 80rem;
+    margin: auto;
+  }
+
+  main #cover{
+    max-width: 100%;
+    max-height: 40rem;
+  }
+
+  .header-post{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  sidebar{
+    grid-area: sidebar;
+  }
+  footer{
+    grid-area: footer;
+  }
+}
