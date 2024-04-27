@@ -1,0 +1,132 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --action-color: #387E96;
+  --logo-color: #F4FCFF;
+  --search-bar: #5998a9;
+  --white: #fff;
+}
+
+html, body, input{
+  font-family: "Mulish", sans-serif;
+}
+
+header{
+  height: 7.2rem;
+  padding: 1.2rem 2.6rem;
+  background-color: var(--action-color);
+
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+header .logo{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--logo-color);
+}
+
+form{
+  height: 4rem;
+  min-width: 2.4rem;
+  border-radius: .4rem;
+
+  flex: 1;
+}
+
+form input{
+  border-radius: .4rem;
+  border: 0;
+  padding: 1.2rem;
+  width: 100%;
+  background-color: var(--search-bar);
+}
+form input::placeholder{
+  font-size: 1.6rem;
+  color: var(--white);
+  font-weight: 500;
+}
+
+header #user{
+  width: 4.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* main */
+section, sidebar, footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section{
+  margin: 3.1rem 2.4rem;
+}
+
+main #cover{
+  max-width: 43.4rem;
+  max-height: 22rem;
+}
+h2{
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: .8rem;
+}
+
+.opinion{
+  display: flex;
+  gap: 12px;
+}
+
+.opinion button{
+  background-color: var(--action-color);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0;
+}
+
+.header-post{
+  margin-bottom: 3.2rem;
+  align-self: self-start;
+}
+section p{
+  font-size: 1.6rem;
+}
+
+/* sidebar */
+sidebar > *{
+  margin-bottom: 3.2rem;
+}
+.card{
+  display: flex;
+  gap:1.6rem;
+
+  width: 38.2rem;
+}
+
+.text h3{
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+.text p{
+  font-size: 1.4rem;
+}
+
+footer{
+  height: 6.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--action-color);
+}
