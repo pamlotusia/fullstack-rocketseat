@@ -3,6 +3,9 @@
       subtração, multiplicação, divisão e resto 
       da divisão
 
+      **desafio extra
+      - [ ]  Verifique se a soma dos dois números é par ~~(ou ímpar)~~;
+      - [ ]  Verifique se os dois números inseridos são iguais ~~(ou diferentes)~~.
       e para cada operação, mostrar um alerta com o resultado
  */
 let firstNumber = Number(prompt('Digite o primeiro numero'))
