@@ -29,3 +29,16 @@ let math = [sum, subtraction, multiplication, division, restByDivision]
 math.forEach((operation)=>{
   alert(`${operation.name} : ${operation(firstNumber, secondNumber)}`)
 })
+
+if(sum(firstNumber, secondNumber) % 2 == 0){
+  alert('A soma dos números é par')
+} else{
+  alert('A soma dos números é ímpar')
+}
+
+if(firstNumber == secondNumber){
+  alert('Os dois números inseridos são iguais.')
+} else {
+  alert('Os dois números inseridos são diferentes.')
+}
+
