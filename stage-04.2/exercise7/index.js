@@ -12,11 +12,11 @@
       "Não existem itens cadastrados"
       3. caso o usuario digite 3, a aplicação deverá ser encerrada
 */
-
 let options
 let list = []
 
-while (options != 3) {
+while(options != 3){
+  
   options = Number(
     prompt(`Olá usuário, digite o numero da opção desejada
         1. Cadastrar um item na lista
@@ -24,15 +24,24 @@ while (options != 3) {
         3. Sair do programa`)
   )
 
-  if (options == 1) {
-    let item = prompt('cadastrar item:')
-    list.push(item)
-  } else if (options == 2) {
-    if (list == '') {
-      alert('Não existem itens cadastrados')
-    } else {
-      alert(list)
-    }
+  switch (options){
+    case 1:
+      let item = prompt('cadastrar item:')
+      list.push(item)
+      break
+    case 2:
+      if (list == '') {
+        alert('Não existem itens cadastrados')
+      } else {
+        alert(list)
+      }
+      break
+      case 3:
+        alert('programa encerrado')
+        break
+      default:
+        alert('Opção inválida. Tente novamente.')
   }
+  
 }
-alert('programa encerrado')
+
