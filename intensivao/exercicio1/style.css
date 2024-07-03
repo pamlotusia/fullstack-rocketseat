@@ -27,6 +27,7 @@ section, main,footer{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 10rem;
 }
 
 #astro{
@@ -38,10 +39,14 @@ section, main,footer{
 #seta{
   width: 5.8rem;
   height: 10rem;
-  margin-bottom: 9rem;
 }
+
 .initial .text{
+  position: relative;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:baseline;
 }
 .text h1{
   color: var(--text-action);
@@ -86,6 +91,10 @@ main{
 section.contact{
   padding: 8rem 4rem;
 }
+#background{
+  visibility: hidden;
+  display: none;
+}
 
 .block-info h2{
   font-size: 3.2rem;
@@ -111,8 +120,8 @@ form{
 }
 
 .input input{
-  outline: none;
   border: none;
+  outline: none;
   font-size: 1.6rem;
   font-weight: 700;
   margin-left: 1rem;
@@ -137,6 +146,12 @@ button{
   padding: 1rem 1.6rem;
   background-color: var(--text-color);
   color: var(--base-color);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #090731;
 }
 
 footer{
@@ -148,13 +163,57 @@ footer{
 }
 
 @media(min-width: 70em){
-  .initial img{
+  .initial, main{
+    padding-inline: 10rem;
+  }
+  .initial {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #astro{
     width: 72rem;
     height: 73rem;
   }
 
-  .text img{
-    width: 5.8rem;
-    height: 10rem;
+  #seta{
+    position: absolute;
+    bottom: -22rem;
+  }
+  .initial .text{
+    text-align: left;
+  }
+  .text h1{
+    font-size: 5.8rem;
+  }
+  .text p{
+    font-size: 3.2rem;
+  }
+
+  main{
+    display: flex;
+    gap: 6rem;
+  }
+
+  section.contact{
+    position: relative;
+  }
+
+  #background{
+    visibility: visible;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  form{
+    margin-inline: 7rem;
+  }
+
+  form{
+    max-width: 59rem;
   }
 }
