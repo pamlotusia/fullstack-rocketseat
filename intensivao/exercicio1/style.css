@@ -15,7 +15,7 @@
   --text-color-medium: #8D8D99;
 }
 
-html, body, input{
+html, body, input, textarea, button{
   font-family: "Mulish", sans-serif;
 }
 
@@ -23,6 +23,26 @@ section, main,footer{
   padding-inline: 4rem;
 }
 
+.initial{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#astro{
+  width: 36rem;
+  height: 37rem;
+  margin-bottom: 1.7rem;
+}
+
+#seta{
+  width: 5.8rem;
+  height: 10rem;
+  margin-bottom: 9rem;
+}
+.initial .text{
+  text-align: center;
+}
 .text h1{
   color: var(--text-action);
   font-size: 3.2rem;
@@ -32,29 +52,100 @@ section, main,footer{
   color: var(--text-color);
   font-size: 2rem;
   font-weight: 500;
+  margin-bottom: 3.5rem;
 }
 
 main{
   background-color: var(--text-color);
+  padding: 5rem 4rem;
 }
 
 .card{
   background-color: var(--base-color);
   padding: 2.6rem;
+  margin: 5rem 0 ;
+  border-radius: 2rem;
+}
 
+.card img{
+  margin-bottom: 2rem;
 }
 
 .card .title{
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 900;
   color: var(--text-action);
-
+  margin-bottom: 1rem;
 }
 .card .subtitle{
   font-size: 1.6rem;
+  font-weight: 600;
   color: var(--text-color);
 }
 
+section.contact{
+  padding: 8rem 4rem;
+}
+
+.block-info h2{
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--text-action);
+  margin-bottom: 4rem;
+}
+
+form{
+  display: grid;
+}
+.input, textarea, button{
+  border-radius: 1.6rem;
+}
+
+.input{
+  min-width: 35rem;
+  padding: 1.6rem;
+  border: var(--text-color) 2px solid;
+  margin-bottom: 2.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.input input{
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+::-webkit-input-placeholder {
+  color: var(--text-color);
+}
+
+textarea{
+  border: var(--text-color) 2px solid;
+  font-size: 1.6rem;
+  font-weight: 700;
+  min-width: 35rem;
+  padding: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+button{
+  width: 16rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 1rem 1.6rem;
+  background-color: var(--text-color);
+  color: var(--base-color);
+}
+
+footer{
+  background-color: var(--text-color);
+  text-align: center;
+  padding: 3.2rem 0 ;
+  font-size: 2rem;
+  color: var(--base-color);
+}
 
 @media(min-width: 70em){
   .initial img{
