@@ -29,5 +29,5 @@ function toggleScreen(){
   screen2.classList.toggle('hide')
 }
 
-btn.addEventListener('click', guessTheNumber)
+document.addEventListener('keydown', guessTheNumber) //keydown na pagina, não no btn como estava sendo feito
 btn2.addEventListener('click', resetGame)
