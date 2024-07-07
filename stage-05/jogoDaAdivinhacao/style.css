@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+}
+
+body{
+  background: linear-gradient(287.56deg, #c2e9fb 0%, #a1c4fd 100% );
+  font-size: 1.6rem;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+body, button{
+  font-family: "DM Sans", sans-serif;
+}
+
+.hide{
+  display: none;
+}
+
+main{
+  width: min(44rem, 90%);
+  padding: 4.8rem 6.4rem 6.4rem;
+  background-color: #fff;
+  box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+main > *{
+  display: grid;
+  justify-content: center;
+}
+
+h1{
+  margin-bottom: 1.6rem;
+}
+
+.sub{
+  text-align: center;
+  margin-bottom: 4.8rem;
+
+}
+.tries{
+  display: flex;
+  justify-content: center;
+}
+
+.tries > *{
+  padding: 1.6rem;
+}
+
+#try{
+  border: none;
+  outline: none;
+  background-color: #DCE2E9;
+  color: #34355B;
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+
+#btn{
+  background-color: #7879F1;
+  color: #fff;
+  border: none;
+  border-radius: 0 0.4rem 0.4rem 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+#btn:hover, #btn-2:hover{
+  background-color: #5e5ecc;
+}
+
+/* screen 2 - placar */
+
+h2{
+  font-size: 2.4rem;
+  font-weight: normal;
+  margin-bottom: 3.3rem;
+}
+
+#btn-2{
+  background-color: #7879F1;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+}
