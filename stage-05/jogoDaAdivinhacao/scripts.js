@@ -9,11 +9,9 @@ let tries = 1
 function guessTheNumber() {
   if (random == guess.value) {
     console.log('acertou!')
-    screen1.classList.toggle('hide')
-    screen2.classList.toggle('hide')
+    toggleScreen()
     document.querySelector('span').textContent = tries
   } else {
-    console.log(guess, random, tries)
     tries++
     guess.value = ''
   }
@@ -21,10 +19,14 @@ function guessTheNumber() {
 }
 
 function resetGame() {
-  screen1.classList.toggle('hide')
-  screen2.classList.toggle('hide')
+  toggleScreen()
   guess.value = ''
   tries = 1
+}
+
+function toggleScreen(){
+  screen1.classList.toggle('hide')
+  screen2.classList.toggle('hide')
 }
 
 btn.addEventListener('click', guessTheNumber)
