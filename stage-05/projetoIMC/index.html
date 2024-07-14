@@ -11,23 +11,36 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="./scripts/script.js" defer type="module"></script>
+
   </head>
   <body>
+    <div class="error">
+      Digite somente números
+    </div>
     <main>
       <form>
         <h1 class="title">Cálculo de IMC</h1>
         <div class="input-wrapper">
           <label for="weight">Peso(kg)</label>
-          <input type="text" placeholder="75" />
+          <input type="text" placeholder="75" id="weight" />
         </div>
         <div class="input-wrapper">
-          <label for="height">Altura(m)</label>
-          <input type="text" placeholder="165" />
+          <label for="height">Altura(cm)</label>
+          <input type="text" placeholder="165" id="height"/>
         </div>
         <button>Calcular IMC<img src="seta.svg" alt=""></button>
       </form>
     </main>
 
-    <script src="script.js"></script>
+    <div class="modal-wrapper">
+      <div class="modal card">
+        <h2 class="title">Seu IMC é de </h2>
+        <button class="close">
+          <img src="close.svg" alt="">
+        </button>
+      </div>
+    </div>
+
   </body>
 </html>

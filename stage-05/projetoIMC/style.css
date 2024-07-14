@@ -43,7 +43,7 @@ label{
   font-size: 1.4rem;
 }
 
-input, button{
+input, form button{
   width: 30rem;
   height: 5.2rem;
   font-family: "Roboto", sans-serif;
@@ -65,15 +65,82 @@ input:focus{
   color:rgba(73, 80, 87, 50%);
 }
 
-button{
+form button{
   border: none;
   background-color: #02799D;
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
   margin-top: 1.6rem;
+  cursor: pointer;
+  transition: background .3s;
 }
+form button:hover{
+  background-color: #054e64;
 
+}
 img{
   margin-left: .8rem;
+}
+
+/* modal */
+.card{
+  background-color: #fff;
+  padding: 4rem 6rem;
+  border-radius:.4rem ;
+}
+.modal-wrapper{
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.7);
+
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+.modal-wrapper.open{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: relative;
+}
+.modal button{
+  background: none;
+  border: none;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  cursor: pointer;
+}
+.modal button:hover{
+  transform: scale(1.1);
+}
+
+/* error message */
+.error{
+  background-color: rgb(244, 45, 45);
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: transform .5s;
+}
+.error.open{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
