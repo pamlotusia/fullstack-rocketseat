@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --font-title: 'Montserrat', sans-serif;
+  --font-message: 'Dancing Script', cursive;
+  --font-default: 'DM Sans', sans-serif;
+  --title-color: #34355b;
+  --box-message: #e4edf1;
+  --action-color: #ff9500;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  background-color: #fff;
+  padding: 4.8rem 6.4rem 6.4rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+.subtitle {
+  color: var(--title-color);
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-weight: bold;
+  font-size: 2.4rem;
+  max-width: 28rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-family: var(--font-default);
+}
+
+.subtitle,
+.message {
+  margin-bottom: 2rem;
+}
+
+.message {
+  width: 29.3rem;
+  background-color: var(--box-message);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  transform: scale(1.1)
+}
+
+.message p {
+  font-family: var(--font-message);
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+button {
+  background-color: var(--action-color);
+  padding: 1.6rem;
+  color: #fff;
+  font-family: var(--font-default);
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+.hide {
+  display: none;
+}
+
+img {
+  animation: trim 0.13s infinite ease-in-out;
+}
+
+/* animações */
+@keyframes trim {
+  0%,
+  100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
