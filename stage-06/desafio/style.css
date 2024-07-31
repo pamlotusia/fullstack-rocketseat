@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --button-hover: #02799D;
+}
+
+html, button{
+  font-family: "Roboto", sans-serif;
+}
+
+/* lembrar depois */
+/* imagem de fundo que muda na tela */
+/* links mudam de cor quando clicados e quando estão na pagina */
+/* button tem hover */
