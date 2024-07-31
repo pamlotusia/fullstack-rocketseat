@@ -35,10 +35,12 @@ function generateMessage(){
 function openMessage(){
   const textMessage = document.querySelector('.message p')
   textMessage.textContent = generateMessage()
+  setTimeout(()=> text.classList.add('open'), 100)
 }
   
 
 function resetGame(){
   boxDefault.classList.remove('hide')
   boxMessage.classList.add('hide')
+  text.classList.remove('open')
 }
