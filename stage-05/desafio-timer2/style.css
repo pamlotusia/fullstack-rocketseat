@@ -1,0 +1,92 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --primary-color: #02799D;
+  --sound-button: #E1E1E6;
+  --text-color: #323238;
+}
+
+body{
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+}
+
+#page{
+  height: 100vh;
+  display: grid;
+}
+
+#clock{
+  display: grid;
+}
+#timer{
+  font-size: 12.6rem;
+  font-weight: 500;
+  display: flex;
+}
+
+#controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+button{
+  cursor: pointer;
+}
+
+#controls button{
+  border-radius: 50%;
+  border: .3rem solid var(--text-color);
+  padding: .8rem;
+}
+
+#controls i{
+  margin: 0 auto;
+  font-size: 2.4rem;
+}
+
+#sounds{
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: 13rem 13rem;
+  gap: 3.2rem;
+}
+
+#sounds button{
+  max-height: 152px;
+  max-width: 138px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--sound-button);
+  border-radius: 2.4rem;
+  border: none;
+  padding: 4rem 0;
+}
+
+#sounds button img{
+  height: 5.6rem;
+  width:5.2rem ;
+}
+#sounds button .selected{
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+@media(min-width: 70rem){
+  #page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+
+}
