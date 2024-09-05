@@ -18,22 +18,22 @@
     <div id="page">
       <section id="clock">
         <div id="timer">
-          <span class="minutes">25</span>
+          <span id="minutes">00</span>
           <span>:</span>
-          <span class="seconds">00</span>
+          <span id="seconds">00</span>
         </div>
         <div id="controls">
-          <button><i class="ph-fill ph-play"></i></button>
-          <button><i class="ph-fill ph-stop"></i></button>
-          <button><i class="ph-bold ph-plus"></i></button>
-          <button><i class="ph-bold ph-minus"></i></button>
+          <button class="ph-fill ph-play" data-action="play"></button>
+          <button class="ph-fill ph-stop" data-action="pause"></button>
+          <button class="ph-bold ph-plus" data-action="increase"></button>
+          <button class="ph-bold ph-minus" data-action="decrease"></button>
         </div>
       </section>
       <section id="sounds">
-        <button><img src="./assets/tree.svg" alt="" /></button>
-        <button><img src="./assets/cloud.svg" alt="" /></button>
-        <button><img src="./assets/store.svg" alt="" /></button>
-        <button><img src="./assets/fire.svg" alt="" /></button>
+        <button data-action="toggleMusic" id="forest"><img src="./assets/tree.svg" alt="" /></button>
+        <button data-action="toggleMusic" id="rain"><img src="./assets/cloud.svg" alt="" /></button>
+        <button data-action="toggleMusic" id="coffeeShop"><img src="./assets/store.svg" alt="" /></button>
+        <button data-action="toggleMusic" id="fireplace"><img src="./assets/fire.svg" alt="" /></button>
       </section>
     </div>
   </body>

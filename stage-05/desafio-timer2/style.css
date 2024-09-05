@@ -46,10 +46,6 @@ button{
   border-radius: 50%;
   border: .3rem solid var(--text-color);
   padding: .8rem;
-}
-
-#controls i{
-  margin: 0 auto;
   font-size: 2.4rem;
 }
 
