@@ -1,64 +1,74 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   font-size: 62.5%;
 
-  --primary-color: #02799D;
-  --sound-button: #E1E1E6;
+  --primary-color: #02799d;
+  --sound-button: #e1e1e6;
   --text-color: #323238;
 }
 
-body{
+body {
   color: var(--text-color);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-#page{
+#page {
   height: 100vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#clock{
+#clock {
   display: grid;
+  margin: 4rem 0;
 }
-#timer{
+
+#timer {
   font-size: 12.6rem;
   font-weight: 500;
   display: flex;
 }
 
-#controls{
+#controls {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4rem;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-#controls button{
+#controls button {
+  background-color: #fff;
   border-radius: 50%;
-  border: .3rem solid var(--text-color);
-  padding: .8rem;
+  border: 0.3rem solid var(--text-color);
+  padding: 0.8rem;
   font-size: 2.4rem;
 }
 
-#sounds{
+#controls button:focus{
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+#sounds {
   display: grid;
   grid-auto-rows: auto;
-  grid-template-columns: 13rem 13rem;
+  grid-template-columns: 1fr 1fr;
   gap: 3.2rem;
 }
 
-#sounds button{
-  max-height: 152px;
-  max-width: 138px;
+#sounds button {
+  height: 152px;
+  width: 138px;
   display: flex;
   justify-content: center;
   background-color: var(--sound-button);
@@ -67,24 +77,40 @@ button{
   padding: 4rem 0;
 }
 
-#sounds button img{
+#sounds button img {
   height: 5.6rem;
-  width:5.2rem ;
+  width: 5.2rem;
 }
-#sounds button.active{
+#sounds button.active {
   background-color: var(--primary-color);
 }
-#sounds button.active img{
+#sounds button.active img {
   filter: brightness(0) invert(1);
 }
 
-@media(min-width: 70rem){
-  #page{
+@media (min-width: 70rem) {
+  #page {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 4rem;
   }
 
-
+  #sounds {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+  }
+  #sounds button {
+    height: 152px;
+    width: 138px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--sound-button);
+    border-radius: 2.4rem;
+    border: none;
+    padding: 4rem 0;
+  }
 }
