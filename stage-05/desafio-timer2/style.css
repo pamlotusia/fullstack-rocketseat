@@ -71,9 +71,11 @@ button{
   height: 5.6rem;
   width:5.2rem ;
 }
-#sounds button .selected{
+#sounds button.active{
   background-color: var(--primary-color);
-  color: #fff;
+}
+#sounds button.active img{
+  filter: brightness(0) invert(1);
 }
 
 @media(min-width: 70rem){
