@@ -13,7 +13,93 @@ html, button{
   font-family: "Roboto", sans-serif;
 }
 
-/* lembrar depois */
-/* imagem de fundo que muda na tela */
-/* links mudam de cor quando clicados e quando estão na pagina */
-/* button tem hover */
+body{
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+body.home{
+  background-image: url('./assets/mountains-universe-1.png');
+}
+
+body.universe{
+  background-image: url('./assets/mountains-universe02.png');
+}
+
+body.exploration{
+  background-image: url('./assets/mountains-universe-3.png');
+}
+
+nav{
+  padding: 4rem 7.2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  font-size: 2.2rem;
+}
+
+nav a{
+  text-decoration: none;
+  color: #8D8D99;
+  cursor: pointer;
+}
+
+nav a:focus{
+  color: #fff;
+  font-weight: 700;
+}
+
+h1{
+  font-size: 4.8rem;
+  font-weight: bold;
+  margin-bottom: 1.6rem;
+}
+
+.content{
+  max-width: 64.8rem;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 6.3rem 10rem;
+  line-height: 160%;
+}
+
+div#home{
+  position: absolute;
+  display: flex;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  padding: 1.2rem 3.2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: #fff 2px solid;
+  border-radius: .5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover,
+button a:hover{
+  background-color: #fff;
+  color: var(--button-hover);
+}
+
+button a{
+  text-decoration: none;
+  color: #fff;
+}
