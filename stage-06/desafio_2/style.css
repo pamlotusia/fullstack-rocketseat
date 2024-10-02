@@ -137,4 +137,7 @@ td .remove{
   border: none;
 
   color: red;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
 }
