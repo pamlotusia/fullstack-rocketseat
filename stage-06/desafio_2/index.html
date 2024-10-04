@@ -7,48 +7,49 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <script type="module" src="js/main.js" defer></script>
 </head>
 <body>
   <div id="app">
    <header>
-    <h1>Github Favorites</h1>
+    <img src="Gitfav.svg" alt="">
     <div class="search">
-      <label for="input-search" class="sr-only">Usuário do Github</label>
-      <input type="text" name="" id="input-search" placeholder="Usuário do Github">
-      <button class="add">&plus;</button>
+      <label for="input-search" class="sr-only"></label>
+      <input type="text" name="" id="input-search" placeholder="Digite o Github username que quer favoritar">
+      <button class="add"><img src="star.svg" alt=""><p>favoritar</p></button>
     </div>
    </header> 
-   <table>
-    <thead>
-      <tr>
-        <th>Usuário</th>
-        <th>Repositórios</th>
-        <th>Seguidores</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- <tr>
-        <td class="user">
-          <img src="https://github.com/pamlotusia.png" alt='Imagem de Pamela Lima'>
-          <a href="https://github.com/pamlotusia" target="_blank">
-            <p>Pamela Lima</p>
-            <span>pamlotusia</span>
-          </a>
-        </td>
-        <td class="repositories">30</td>
-        <td class="followers">2</td>
-        <td>
-          <button class="remove">&times;</button>
-        </td>
-      </tr> -->
-    </tbody>
-   </table>
+   <div class="scrollable-table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="user">Usuário</th>
+          <th>Repositórios</th>
+          <th>Seguidores</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+           <td class="user">
+             <img src="https://github.com/pamlotusia.png" alt='Imagem de Pamela Lima'>
+             <a href="https://github.com/pamlotusia" target="_blank">
+               <p>Pamela Lima</p>
+               <span>pamlotusia</span>
+             </a>
+           </td>
+           <td class="repositories">30</td>
+           <td class="followers">2</td>
+           <td>
+             <button class="remove">Remover</button>
+           </td>
+         </tr>
+      </tbody>
+     </table>
+   </div>
+
+
   </div>
   
 </body>

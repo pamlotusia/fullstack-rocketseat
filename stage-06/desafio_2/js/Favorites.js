@@ -79,7 +79,7 @@ export class FavoritesView extends Favorites {
       row.querySelector('.user img').alt = `Foto de ${user.name}`
       row.querySelector('.user a').href = `https://github.com/${user.login}`
       row.querySelector('.user p').textContent = user.name
-      row.querySelector('.user span').textContent = user.login
+      row.querySelector('.user span').textContent = `/${user.login}`
       row.querySelector('.repositories').textContent = user.public_repos
       row.querySelector('.followers').textContent = user.followers
 
@@ -102,13 +102,13 @@ export class FavoritesView extends Favorites {
           <img src="https://github.com/pamlotusia.png" alt='Imagem de Pamela Lima'>
           <a href="https://github.com/pamlotusia" target="_blank">
             <p>Pamela Lima</p>
-            <span>pamlotusia</span>
+            <span>/pamlotusia</span>
           </a>
         </td>
         <td class="repositories">30</td>
         <td class="followers">2</td>
         <td>
-          <button class="remove">&times;</button>
+          <button class="remove">Remover</button>
         </td> `
     return tr
   }

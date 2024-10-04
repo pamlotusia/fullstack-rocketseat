@@ -7,21 +7,45 @@
 :root{
   font-size: 62.5%;
 
-  font-family: 'Poppins', sans-serif;
-  --text-color: #303030;
+  --font-family: "Roboto", system-ui;
+  --text-color: #fff;
+  --primary-color: #092D38;
+  --placeholder: #7C7C8A;
+  --search: #06181C;
+  --button: #065E7C;
+  --stroke: #4A808C;
 
-  --primary-color: pink;
 }
 
 body{
+  background-color: #000;
+  font-family: var(--font-family);
   font-size: 1.6rem;
-  background-color: rgb(249, 252, 252);
 }
 
 #app{
   padding: 2rem;
-  max-width: 50rem;
+  max-width: 112rem;
   margin: 0 auto;
+}
+
+.scrollable-table{
+  height: 62rem;
+  overflow-y: scroll;
+  border-radius: 12px;
+}
+
+.scrollable-table::-webkit-scrollbar{
+  z-index: 2;
+  width: 1rem;
+}
+.scrollable-table::-webkit-scrollbar-thumb{
+  background-color: var(--stroke);
+  width: .5rem;
+  border-radius: 10px;
+}
+.scrollable-table::-webkit-scrollbar-track{
+  background-color: none;
 }
 
 header{
@@ -50,30 +74,57 @@ header h1{
 .search{
   display: flex;
   align-items: center;
+  gap: .8rem;
+}
+
+.search input, .search button{
+  font-family: var(--font-family);
+  border-radius: .5rem;
+  height: 4rem;
 }
 
 .search input{
-  height: 3.2rem;
-  border: 1px solid #ccc;
-  border-radius: .4rem 0 0 .4rem;
-  padding: 0 .8rem;
+  width: 46rem;
+  border: none;
+  padding: 1.6rem;
+  background-color: var(--search);
+  color: var(--placeholder);
+  font-size: 1.6rem;
 }
 
 .search button{
-  background-color: var(--primary-color);
-  border-radius: 0 .4rem .4rem 0;
-  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 3.2rem;
+
+  background-color: var(--button);
   border: none;
-  padding: 0 1rem;
   cursor: pointer;
-}
-.search button:hover{
-  filter: brightness(1.1);
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-transform: uppercase;
 }
 
+/* arrumar imagem hover */
+.search button:hover{
+  background-color: var(--text-color);
+  color: var(--button);
+}
+.search button img:hover{
+  color: var(--button);
+}
+
+/* tabela */
 table{
   width: 100%;
-  border-collapse: collapse;
+  overflow: hidden;
+
+  border-radius: 1.2rem;
+  border-collapse: separate; 
+  border-spacing: 0; /* Remove espaços entre as células */
+  border: 1px solid #4A808C; /* Cor da borda */
 
   box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.3);
 }
@@ -86,39 +137,45 @@ table *{
 table th{
   background-color: var(--primary-color);
   text-align: left;
-  font-weight: normal;
-  padding: 1.5rem;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 1.5rem 4rem;
+  position: sticky;
+  top: 0;
 }
 
 table th:first-child{
-  border-top-left-radius: .4rem;
+  border-top-left-radius: 1.2rem;
 }
 table th:last-child{
-  border-top-right-radius: .4rem;
+  border-top-right-radius: 1.2rem;
 }
 
 table tr:nth-child(odd){
-  background-color: #ddd;
+  background-color: rgba(6,22,27,0.5);
 }
 
-tabletr:nth-child(even){
-  background-color: #eee;
+table tr:nth-child(even){
+  background-color: rgb(74, 128, 140,0.3);
 }
 
 table td{
-  padding: 1.5rem;
+  padding: 2.8rem 4rem;
   text-align: left;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 td.user{
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.6rem;
+  font-size: 2rem;
 }
 
 td.user img{
-  width: 5rem;
-  height: 5rem;
+  width: 5.6rem;
+  height: 5.6rem;
 
   object-fit: cover;
   border-radius: 50%;
@@ -126,18 +183,26 @@ td.user img{
 
 td.user a{
   text-decoration: none;
+  font-size: 2rem;
 }
 
 td.user a p{
   font-weight: bold;
+  font-size: 2rem;
+}
+
+td span{
+  font-weight: 200;
+  font-size: 2rem;
 }
 
 td .remove{
   background:none;
   border: none;
 
-  color: red;
+  color: #F75A68;
   cursor: pointer;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
 }
+
