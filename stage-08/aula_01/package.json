@@ -1,7 +1,7 @@
 {
   "name": "aula_01",
   "version": "1.0.0",
-  "description": "aula 1 - criando uma aplicação Node.JS",
+  "description": "Introdução ao Node.JS",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/server.js",
