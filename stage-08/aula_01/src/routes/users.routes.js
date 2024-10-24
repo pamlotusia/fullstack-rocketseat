@@ -15,6 +15,7 @@ const usersController = new UsersController()
 
 // METODO POST
 usersRoutes.post('/', myMiddleware, usersController.create)
+usersRoutes.put('/:id', myMiddleware, usersController.update)
 
 // exporta todo o conjunto de rotas usersRoutes
 module.exports = usersRoutes
