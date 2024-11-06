@@ -8,8 +8,10 @@ const notesRoutes = Router()
 const notesController = new NotesController()
 
 // METODO POST
+notesRoutes.get('/', notesController.index)
 notesRoutes.post('/:user_id', notesController.create)
 notesRoutes.get('/:id', notesController.show)
+notesRoutes.delete('/:id', notesController.delete)
 
 // exporta todo o conjunto de rotas usersRoutes
 module.exports = notesRoutes
