@@ -1,13 +1,10 @@
 const express = require("express")
+const routes = require("./routes")
 
 const app = express()
-
 app.use(express.json())
 
-app.post("/users", (req, res)=> {
-  const {name, age} = req.body
-  res.json({name, age})
-})
+app.use(routes)
 
 const PORT = 4444
 app.listen(PORT , ()=> console.log(`Server is running on port ${PORT}`))
