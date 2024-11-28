@@ -6,6 +6,6 @@ const notesMovie = Router()
 const notesController = new NotesController()
 
 notesMovie.post("/:user_id", notesController.create)
-notesMovie.get("/:id", notesController.show)
+// notesMovie.get("/:id", notesController.show)
 
-module.exports = notesController
+module.exports = notesMovie

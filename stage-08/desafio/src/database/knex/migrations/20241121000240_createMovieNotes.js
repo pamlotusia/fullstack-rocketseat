@@ -15,5 +15,10 @@ exports.up = knex =>
     table.timestamp('created_at').default(knex.fn.now())
     table.timestamp('updated_at').default(knex.fn.now())
   })
+  .then(() =>
+    knex.raw(
+      'ALTER TABLE movie_notes ADD CONSTRAINT check_rating CHECK (rating >= 0 AND rating <= 5)'
+    )
+  )
 
 exports.down = knex => knex.schema.dropTable('movie_notes')
