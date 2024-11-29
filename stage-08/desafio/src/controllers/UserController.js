@@ -9,7 +9,7 @@ class UserController {
     const checkUsersExists = await knex('users').where({ email }).first()
 
     if (checkUsersExists) {
-      throw new AppError('este e-mail já está em uso')
+      throw new AppError('This email is already in use.')
     }
 
     const hashedPassword = await hash(password, 8)
@@ -26,13 +26,13 @@ class UserController {
     const user = await knex('users').where({ id }).first()
 
     if (!user) {
-      throw new AppError('Usuário não encontrado.')
+      throw new AppError('User not found.')
     }
 
     const userWithUpdatedEmail = await knex('users').where({ email }).first()
 
     if (userWithUpdatedEmail && userWithUpdatedEmail.id !== user.id) {
-      throw new AppError('Este e-mail já está em uso.')
+      throw new AppError('This email is already in use.')
     }
 
     const updatedUser ={
@@ -42,14 +42,14 @@ class UserController {
     }
 
     if (password && !old_password) {
-      throw new AppError('Você precisa informar a antiga senha para redefinir.')
+      throw new AppError('You must enter your old password to reset.')
     }
 
     if (password && old_password) {
       const checkOldPassword = await compare(old_password, user.password)
 
       if (!checkOldPassword) {
-        throw new AppError('Senha antiga não confere.')
+        throw new AppError('Old password does not match.')
       }
 
       updatedUser.password = await hash(password, 8)

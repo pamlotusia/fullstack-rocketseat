@@ -7,7 +7,7 @@ class NotesController{
     const { user_id } = request.params
 
     if(typeof rating !== "number"|| rating > 5 || rating < 0){
-      throw new AppError("Valor de avaliação precisa ser um número de 1 a 5")
+      throw new AppError("The rating must to be a number from 1 to 5.")
     }
 
     const [note_id] = await knex("movie_notes").insert({
@@ -25,7 +25,7 @@ class NotesController{
       }
     })
     await knex("movie_tags").insert(tagsInsert)
-    response.status(200).json({message: "Avaliação gravada com sucesso."})
+    response.status(200).json({message: "Note recorded successfully."})
   }
 }
 
