@@ -1,12 +1,11 @@
 import { Container } from './styles'
 import { Button } from '../../components/Button'
+import { Header } from '../../components/Header'
 
 export function Details() {
   return (
     <Container>
-      <h1>Hello</h1>
-      <Button title='Entrar' loading/>
-      <Button title='Cadastrar'/>
+      <Header></Header>
       <Button title='Voltar'/>
     </Container>
   )
