@@ -6,13 +6,13 @@ import GlogalStyles from './styles/global'
 
 import theme from './styles/theme'
 
-import { SignUp } from './pages/SignUp'
+import { Profile } from './pages/Profile'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlogalStyles />
-        <SignUp />
+        <Profile />
     </ThemeProvider>
   </StrictMode>
 )
