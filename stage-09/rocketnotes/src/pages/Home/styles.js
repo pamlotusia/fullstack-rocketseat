@@ -17,7 +17,7 @@ export const Container = styled.div`
 `
 export const Brand = styled.div`
   grid-area: brand;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@ export const Brand = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
-  >h1{
+  > h1 {
     font-size: 2.4rem;
     color: ${({ theme }) => theme.COLORS.ORANGE};
   }
@@ -37,19 +37,18 @@ export const Menu = styled.ul`
   padding-top: 6.4rem;
   text-align: center;
 
-  > li{
-    margin-bottom: 2.4rem ;
+  > li {
+    margin-bottom: 2.4rem;
   }
-  
 `
 export const Search = styled.div`
   grid-area: search;
   padding: 6.4rem 6.4rem 0;
-  
 `
 export const Content = styled.div`
   grid-area: content;
-  
+  padding: 0 6.4rem;
+  overflow-y: auto;
 `
 export const NewNote = styled.button`
   grid-area: newnote;
@@ -61,7 +60,7 @@ export const NewNote = styled.button`
   justify-content: center;
   align-items: center;
 
-  svg{
-     margin-right: 8px;
+  svg {
+    margin-right: 8px;
   }
-  `
+`
