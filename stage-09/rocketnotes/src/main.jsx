@@ -6,13 +6,13 @@ import GlogalStyles from './styles/global'
 
 import theme from './styles/theme'
 
-import { New } from './pages/New'
+import { Routes } from './routes'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlogalStyles />
-        <New/>
+        <Routes/>
     </ThemeProvider>
   </StrictMode>
 )
