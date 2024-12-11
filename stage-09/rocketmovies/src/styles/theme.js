@@ -1,7 +1,7 @@
 export default {
   COLORS: {
     BACKGROUND_900: "#0D0C0F",
-    BACKGROUND_800: "#1C1B1E", // background tela
+    BACKGROUND_800: "#1C1B1E", // background tela & button font-color
     BACKGROUND_700: "#312E38", // tag background
     BACKGROUND_600: "#3E3B47", 
     BACKGROUND_500: "#262529", // input search

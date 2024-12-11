@@ -9,15 +9,20 @@ export function Home() {
       <Header />
       <Section>
         <header>
-          <h2>Meus filmes</h2>
+          <p>Meus filmes</p>
           <button>
             <FiPlus /> Adicionar filme
           </button>
         </header>
-        <Card title='Interestelar' text='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quam,
-        beatae ex omnis ipsam perspiciatis animi architecto, mollitia, hic
-        itaque dignissimos rem. Error, ex quae. Magni deleniti minus magnam
-        omnis?'/>
+        <div className='cards'>
+        <Card title='Interestelar' text='kvmdlfknmv'/>
+        <Card title='Interestelar' text='kvmdlfknmv'/>
+        <Card title='Interestelar' text='kvmdlfknmv'/>
+        <Card title='Interestelar' text='kvmdlfknmv'/>
+        <Card title='Interestelar' text='kvmdlfknmv'/>
+        <Card title='Interestelar' text='kvmdlfknmv'/>
+
+        </div>
 
       </Section>
     </Container>
