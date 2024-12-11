@@ -14,16 +14,14 @@ export function Home() {
             <FiPlus /> Adicionar filme
           </button>
         </header>
-        <div className='cards'>
-        <Card title='Interestelar' text='kvmdlfknmv'/>
-        <Card title='Interestelar' text='kvmdlfknmv'/>
-        <Card title='Interestelar' text='kvmdlfknmv'/>
-        <Card title='Interestelar' text='kvmdlfknmv'/>
-        <Card title='Interestelar' text='kvmdlfknmv'/>
-        <Card title='Interestelar' text='kvmdlfknmv'/>
-
+        <div className="cards">
+          <Card title="Interestelar" text="kvmdlfknmv" />
+          <Card title="Interestelar" text="kvmdlfknmv" />
+          <Card title="Interestelar" text="kvmdlfknmv" />
+          <Card title="Interestelar" text="kvmdlfknmv" />
+          <Card title="Interestelar" text="kvmdlfknmv" />
+          <Card title="Interestelar" text="kvmdlfknmv" />
         </div>
-
       </Section>
     </Container>
   )

@@ -4,12 +4,18 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
-  position: fixed;
+  display: flex;
+  flex-direction: column;
 `
 export const Section = styled.section`
   padding: 4.2rem 12.3rem;
 
   width: 100%;
+  flex: 1; 
+  overflow-y: auto; 
+
+  display: flex;
+  flex-direction: column;
 
   > header {
     display: flex;
@@ -35,10 +41,19 @@ export const Section = styled.section`
   }
 
   > .cards {
-    overflow-y: auto;
-
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+
+    overflow-y: auto; 
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.COLORS.PINK};
+      border-radius: 4px;
+    }
   }
 `
