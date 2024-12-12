@@ -2,11 +2,10 @@ import { Container } from './styles'
 import { Tag } from '../../components/Tag'
 import { RiStarSLine, RiStarSFill } from 'react-icons/ri'
 
-
-export function Card({title, text, ...rest}) {
+export function Card({ title, text, tagName, ...rest }) {
   return (
     <Container>
-      <strong>{title}</strong>
+      <h2>{title}</h2>
 
       <div>
         <RiStarSFill />
@@ -16,14 +15,12 @@ export function Card({title, text, ...rest}) {
         <RiStarSLine />
       </div>
 
-      <p>
-        {text}
-      </p>
+      <p>{text}</p>
 
       <div>
-        <Tag title="Ficção Cientifica" />
-        <Tag title="Drama" />
-        <Tag title="Familia" />
+        {tagName && Array.from(tagName).map((tag) => (
+          <Tag title={tag} />
+        ))}
       </div>
     </Container>
   )

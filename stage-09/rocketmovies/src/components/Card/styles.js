@@ -7,23 +7,25 @@ export const Container = styled.div`
 
   background-color: ${({ theme }) => theme.COLORS.PURPLE};
 
-  > strong {
+  h2 {
     font-size: 2.4rem;
-    font-size: 700;
+    font-weight: 700;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
-  > div{
+  > div {
     display: flex;
     gap: 8px;
+    margin: 8px 0;
+
+    svg {
+      color: ${({ theme }) => theme.COLORS.PINK};
+    }
   }
 
   > p {
     font-size: 1.6rem;
     color: ${({ theme }) => theme.COLORS.GRAY_300};
     margin-bottom: 2.5rem;
-    
   }
-
-
 `
