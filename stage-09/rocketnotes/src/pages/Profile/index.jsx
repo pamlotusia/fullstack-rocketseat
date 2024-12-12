@@ -17,11 +17,10 @@ export function Profile() {
           <img src="https://github.com/pamlotusia.png" alt="Foto do usuário" />
 
           <label htmlFor="avatar">
-            <FiCamera/>
+            <FiCamera />
 
-            <input type="file" id='avatar'/>
+            <input type="file" id="avatar" />
           </label>
-          
         </Avatar>
         <Input placeholder="Nome" type="text" icon={FiUser} />
         <Input placeholder="E-mail" type="text" icon={FiMail} />
