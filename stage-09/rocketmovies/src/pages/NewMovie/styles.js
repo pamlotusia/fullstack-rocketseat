@@ -1,7 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
   > main {
+    flex: 1;
+
+    overflow-y: auto;
     padding: 4.2rem 12.3rem;
 
     > * {
@@ -22,14 +30,19 @@ export const Container = styled.div`
       }
     }
 
-    > div{
+    > div {
       display: flex;
       gap: 4rem;
     }
-
-    .buttons{
-      gap: 4rem;
+    &::-webkit-scrollbar {
+      width: 8px;
     }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.COLORS.PINK};
+      border-radius: 4px;
+    }
+
   }
 `
 
@@ -62,6 +75,8 @@ export const Form = styled.form`
   }
 
   > textarea {
+    resize: none;
+    
     width: 100%;
     height: 27rem;
 

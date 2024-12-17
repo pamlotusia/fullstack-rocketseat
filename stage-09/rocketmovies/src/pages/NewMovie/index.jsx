@@ -21,7 +21,7 @@ export function NewMovie() {
             <Input placeholder="Título" />
             <Input placeholder="Sua nota (de 0 a 5)" />
           </div>
-          <textarea placeholder="Observações"></textarea>
+          <textarea rows="5" placeholder="Observações"></textarea>
         </Form>
 
         <Section>
@@ -32,8 +32,8 @@ export function NewMovie() {
           </div>
         </Section>
         <div className="buttons">
-          <Button title="Excluir filme" />
-          <Button title="Salvar alterações"/>
+          <Button title="Excluir filme" className='dark'/>
+          <Button title="Salvar alterações" className='light' />
         </div>
       </main>
     </Container>
