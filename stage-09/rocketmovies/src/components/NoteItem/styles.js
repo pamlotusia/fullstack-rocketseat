@@ -3,35 +3,31 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   background-color: ${({ theme, isNew }) =>
-    isNew ? ' transparent ' : theme.COLORS.BACKGROUND_900};
-  color: ${({ theme }) => theme.COLORS.GRAY_300};
+    isNew ? ' transparent ' : theme.COLORS.BACKGROUND_500};
+  color: ${({ theme }) => theme.COLORS.GRAY_400};
   border: ${({ theme, isNew }) =>
-    isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : 'none'};
+    isNew ? `1px dashed ${theme.COLORS.GRAY_400}` : 'none'};
 
-  margin-bottom: 8px;
   border-radius: 1rem;
-  padding-right: 1.6rem;
+  padding: 2rem 1.6rem;
+
+  margin-right: 2rem;
 
   > button {
     border: none;
     background: none;
-  }
 
-  .button-delete{
-    color: ${({ theme }) => theme.COLORS.RED}
-  }
-  .button-add{
-    color: ${({ theme }) => theme.COLORS.ORANGE}
+    color: ${({ theme }) => theme.COLORS.PINK};
+
+    svg{
+      font-size: 2rem;
+    }
   }
 
   >input{
-    height: 5.6rem;
-    width: 100%;
-
-    padding: 1.2rem;
-
     color: ${({ theme }) => theme.COLORS.WHITE};
     background: transparent;
 

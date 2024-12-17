@@ -7,12 +7,13 @@ import theme from './styles/theme'
 
 import { Home } from './pages/Home'
 import { Profile } from './pages/Profile'
+import { NewMovie } from './pages/NewMovie'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-        <Profile />
+        <NewMovie />
     </ThemeProvider>
   </StrictMode>
 )
