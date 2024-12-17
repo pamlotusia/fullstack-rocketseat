@@ -11,7 +11,7 @@ export const Container = styled.div`
     align-items: center;
     padding: 0 12.3rem;
 
-    height: 10rem;
+    height: 14.4rem;
     background-color: ${({ theme }) => theme.COLORS.PURPLE};
     text-align: left;
 
@@ -30,11 +30,19 @@ export const Form = styled.form`
   justify-content: space-around;
 
   color: ${({ theme }) => theme.COLORS.WHITE};
+
+  div:nth-child(3),
+  div:nth-child(5){
+    margin-bottom: 2rem;
+  }
 `
 export const Avatar = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  position: relative;
+  top: -8rem;
 
   > img {
     width: 18rem;
@@ -44,14 +52,33 @@ export const Avatar = styled.div`
   }
 
   > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    right: 9rem;
+
     width: 4.8rem;
     height: 4.8rem;
+
+    border-radius: 50%;
 
     background-color: ${({ theme }) => theme.COLORS.PINK};
     color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
+    svg{
+      font-size: 2rem;
+    }
+
     input {
       display: none;
     }
+  }
+
+  > label:hover{
+    filter: brightness(0.9);
+    cursor: pointer;
   }
 `
