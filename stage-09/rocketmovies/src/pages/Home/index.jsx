@@ -2,7 +2,6 @@ import { Container, Section } from './styles'
 import { Header } from '../../components/Header'
 import { Card } from '../../components/Card'
 import { FiPlus } from 'react-icons/fi'
-import { Tag } from '../../components/Tag'
 
 export function Home() {
   return (
