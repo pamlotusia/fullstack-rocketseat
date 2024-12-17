@@ -30,20 +30,6 @@ export const Form = styled.form`
   justify-content: space-around;
 
   color: ${({ theme }) => theme.COLORS.WHITE};
-
-  > button {
-    width: 100%;
-    height: 4.8rem;
-
-    border: none;
-    border-radius: 8px;
-
-    font-size: 1.6rem;
-    font-weight: 500;
-
-    background-color: ${({ theme }) => theme.COLORS.PINK};
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-  }
 `
 export const Avatar = styled.div`
   display: flex;

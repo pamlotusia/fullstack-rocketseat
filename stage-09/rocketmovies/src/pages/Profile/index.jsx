@@ -1,3 +1,4 @@
+import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
 import { Container, Form, Avatar } from './styles'
 import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from 'react-icons/fi'
@@ -28,7 +29,7 @@ export function Profile() {
           placeholder="Senha atual"
         />
         <Input type="new-password" icon={FiLock} placeholder="Nova senha" />
-        <button>Salvar</button>
+        <Button title='Salvar'/>
       </Form>
     </Container>
   )
