@@ -8,12 +8,13 @@ import theme from './styles/theme'
 import { Home } from './pages/Home'
 import { Profile } from './pages/Profile'
 import { NewMovie } from './pages/NewMovie'
+import { MoviePreview } from './pages/MoviePreview'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-        <NewMovie />
+        <MoviePreview />
     </ThemeProvider>
   </StrictMode>
 )
