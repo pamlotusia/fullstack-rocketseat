@@ -3,12 +3,15 @@ const migrationsRun = require("./database/sqlite/migrations")
 const AppError = require("./utils/AppError")
 const uploadConfig = require('./configs/upload')
 
+const cors = require("cors")
 const express = require('express')
 const routes = require("./routes")
 migrationsRun()
 
 
 const app = express()
+// biblioteca que permite o backend atender às requisições do frontend
+app.use(cors())
 
 // definindo para a aplicação o formato de dados que ela vai lidar -> JSON
 app.use(express.json())
